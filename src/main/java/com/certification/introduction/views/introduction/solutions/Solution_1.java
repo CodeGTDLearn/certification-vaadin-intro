@@ -12,11 +12,10 @@ import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.upload.Upload;
 
-import static com.vaadin.flow.component.button.ButtonVariant.LUMO_PRIMARY;
 import static com.vaadin.flow.component.button.ButtonVariant.MATERIAL_CONTAINED;
 
-public class Exercise1_BookSubmissionForm extends VerticalLayout {
-  public Exercise1_BookSubmissionForm() {
+public class Solution_1 extends VerticalLayout {
+  public Solution_1() {
 
     TextField title = new TextField("Book Title:");
     TextField author = new TextField("Author:");

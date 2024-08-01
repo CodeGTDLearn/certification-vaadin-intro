@@ -14,9 +14,9 @@ import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.upload.Upload;
 
-public class Exercise4_EventRegistrationForm extends VerticalLayout {
+public class Solution_4 extends VerticalLayout {
 
-  public Exercise4_EventRegistrationForm() {
+  public Solution_4() {
 
     H2 title = new H2("Event Registration");
     add(title);

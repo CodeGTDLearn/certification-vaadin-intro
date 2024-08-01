@@ -14,9 +14,9 @@ import com.vaadin.flow.component.textfield.TextField;
 
 import static com.vaadin.flow.component.button.ButtonVariant.LUMO_PRIMARY;
 
-public class Practice_Exercise2 extends VerticalLayout {
+public class Practice_2 extends VerticalLayout {
 
-  public Practice_Exercise2() {
+  public Practice_2() {
 
     var title = new H2("Practice Exercise 02");
     add(title);

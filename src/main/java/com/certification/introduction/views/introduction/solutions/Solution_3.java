@@ -14,9 +14,9 @@ import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.timepicker.TimePicker;
 import com.vaadin.flow.component.upload.Upload;
 
-public class Exercise3_ProductSubmissionForm extends VerticalLayout {
+public class Solution_3 extends VerticalLayout {
 
-  public Exercise3_ProductSubmissionForm() {
+  public Solution_3() {
 
     H2 title = new H2("Submit New Product");
     add(title);

@@ -16,9 +16,9 @@ import com.vaadin.flow.component.upload.Upload;
 
 import static com.vaadin.flow.component.button.ButtonVariant.MATERIAL_CONTAINED;
 
-public class Practice_Exercise1 extends VerticalLayout {
+public class Practice_1 extends VerticalLayout {
 
-  public Practice_Exercise1() {
+  public Practice_1() {
 
     var title = new H2("Practice Exercise 01");
     add(title);

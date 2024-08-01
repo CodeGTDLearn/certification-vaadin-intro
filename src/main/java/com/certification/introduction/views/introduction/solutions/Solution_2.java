@@ -13,8 +13,8 @@ import com.vaadin.flow.component.textfield.TextField;
 
 import static com.vaadin.flow.component.button.ButtonVariant.LUMO_PRIMARY;
 
-public class Exercise2_UserRegistrationForm extends VerticalLayout {
-  public Exercise2_UserRegistrationForm() {
+public class Solution_2 extends VerticalLayout {
+  public Solution_2() {
 
     TextField name = new TextField("Name:");
     EmailField email = new EmailField("E-mail:");

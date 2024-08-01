@@ -15,9 +15,9 @@ import com.vaadin.flow.component.timepicker.TimePicker;
 import com.vaadin.flow.component.upload.Upload;
 
 
-public class Practice_Exercise3 extends VerticalLayout {
+public class Practice_3 extends VerticalLayout {
 
-  public Practice_Exercise3() {
+  public Practice_3() {
 
     var title = new H2("Practice Exercise 03");
     add(title);
