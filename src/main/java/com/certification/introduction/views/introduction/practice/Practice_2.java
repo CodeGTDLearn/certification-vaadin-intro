@@ -9,7 +9,7 @@ import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
 import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.radiobutton.RadioButtonGroup;
 import com.vaadin.flow.component.textfield.EmailField;
-import com.vaadin.flow.component.textfield.IntegerField;
+import com.vaadin.flow.component.textfield.NumberField;
 import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.component.textfield.TextField;
 import com.vaadin.flow.component.upload.Upload;
@@ -18,48 +18,43 @@ public class Practice_2 extends VerticalLayout {
 
   public Practice_2() {
 
-    var title = new H2("Practice Exercise 04");
+    H2 title = new H2("Introduction Exercise 02");
     add(title);
 
+    TextField eventName = new TextField("Event Name");
+    TextArea description = new TextArea("Event Description");
+    DatePicker eventDate = new DatePicker("Event Date");
 
-    var eventName = new TextField("Event Name:");
-    var description = new TextArea("Event Description:");
-    var eventDate = new DatePicker("Event Date:");
-    var eventType = new ComboBox<>("Event Type:");
-    eventType.setItems("Workshop", "Webinar");
-    var qtdeAttenddes = new IntegerField();
-    var emailOrganizer = new EmailField("Organizer Email:");
-    var row = new HorizontalLayout();
-    var submitButton = new Button("Submit Registration");
-    var cancelButton = new Button("Cancel");
-    row.add(submitButton, cancelButton);
+    ComboBox<String> eventType = new ComboBox<>("Event Type");
+    eventType.setItems("Conference", "Workshop", "Seminar", "Webinar");
 
-    var venueType = new RadioButtonGroup<>();
-    venueType.setLabel("Venue Type:");
-    venueType.setItems("Indoor","Outdoor","Virtual");
+    NumberField expectedAttendees = new NumberField("Expected Attendees");
+    expectedAttendees.setMin(1);
+    expectedAttendees.setStep(1);
 
-    var amenities = new CheckboxGroup<>();
-    amenities.setLabel("Amenities:");
-    amenities.setItems("Wi-fi","Catering","Parking");
+    RadioButtonGroup<String> venueType = new RadioButtonGroup<>();
+    venueType.setLabel("Venue Type");
+    venueType.setItems("Indoor", "Outdoor", "Virtual");
 
-    Upload uploadfile = new Upload();
-    uploadfile.setAcceptedFileTypes("image/*");
+    CheckboxGroup<String> amenities = new CheckboxGroup<>();
+    amenities.setLabel("Amenities");
+    amenities.setItems("Wi-Fi", "Catering", "Parking", "Audio/Visual Equipment");
 
+    Upload eventBanner = new Upload();
+    eventBanner.setAcceptedFileTypes("image/*");
 
+    EmailField organizerEmail = new EmailField("Organizer Email");
 
-    //
-    add(eventName,
-        description,
-        eventDate,
-        eventType,
-        qtdeAttenddes,
-        emailOrganizer,
-        venueType,
-        amenities,
-        uploadfile,
-        row
+    Button submitButton = new Button("Submit Registration");
+    Button cancelButton = new Button("Cancel");
+
+    HorizontalLayout buttonLayout = new HorizontalLayout(submitButton, cancelButton);
+
+    add(eventName, description, eventDate, eventType, expectedAttendees, venueType,
+        amenities, eventBanner, organizerEmail, buttonLayout
     );
 
 
   }
+
 }
